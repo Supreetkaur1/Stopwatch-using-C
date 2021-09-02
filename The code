@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<windows.h>
+
+int main()
+{
+	int p,a=0,b=0,c=0,d=0;
+
+	printf("Enter 1 to start the STOPWATCH \n");
+	scanf("%d",&p);
+	if(p==1) {
+			while(1)
+			{
+				printf(" \r %02d : %02d : %02d : %02d",a,b,c,d); //\r is to update value in 1 line only
+				d++;
+				Sleep(10) ;
+				if(d==99)
+				{
+					c++;
+					d=0;
+				}
+				if(c==59)
+				{
+					b++;
+					c=0;
+
+				}
+				if(b==59)
+				{
+					a++;
+					b=0;
+
+				}
+				if(a==24)
+				{
+					a=0;
+
+				}
+
+			} }
+
+			else printf("Can't start the stopwatch");
+			return 0;
+
+}
